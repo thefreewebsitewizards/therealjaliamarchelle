@@ -236,8 +236,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-secondary {
     background: transparent;
-    color: var(--primary-black);
-    border-color: var(--primary-black);
+    color: var(--white);
+    border-color: var(--white);
 }
 
 .btn-secondary:hover {
@@ -249,6 +249,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Hero Section */
+/* Hero Section */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -257,6 +258,45 @@ h1, h2, h3, h4, h5, h6 {
     padding: 120px 20px 50px;
     background: linear-gradient(rgba(141, 68, 68, 0.752), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
     position: relative;
+    overflow: hidden;
+}
+
+/* Floating Particles Background */
+.hero-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(3px 3px at 20px 30px, rgba(255, 255, 255, 0.4), transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(255, 255, 255, 0.3), transparent),
+        radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 255, 0.5), transparent),
+        radial-gradient(2px 2px at 130px 80px, rgba(255, 255, 255, 0.3), transparent),
+        radial-gradient(3px 3px at 160px 30px, rgba(255, 255, 255, 0.4), transparent),
+        radial-gradient(1px 1px at 200px 60px, rgba(255, 255, 255, 0.3), transparent);
+    background-repeat: repeat;
+    background-size: 250px 150px;
+    animation: floatingParticles 25s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes floatingParticles {
+    0% {
+        transform: translateY(0px) translateX(0px) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-15px) translateX(15px) rotate(90deg);
+    }
+    50% {
+        transform: translateY(-10px) translateX(-10px) rotate(180deg);
+    }
+    75% {
+        transform: translateY(10px) translateX(5px) rotate(270deg);
+    }
+    100% {
+        transform: translateY(0px) translateX(0px) rotate(360deg);
+    }
 }
 
 .hero-content {
@@ -283,7 +323,17 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1.5rem;
     color: white;
     line-height: 1.2;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(255, 255, 255, 0.3);
+    transition: text-shadow 0.3s ease;
+}
+
+.hero-title:hover {
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.3),
+        0 0 30px rgba(255, 255, 255, 0.6),
+        0 0 40px rgba(255, 255, 255, 0.4);
 }
 
 .hero-subtitle {
@@ -291,7 +341,9 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 2rem;
     color: rgba(255, 255, 255, 0.9) !important;
     line-height: 1.6;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: 
+        1px 1px 2px rgba(0, 0, 0, 0.3),
+        0 0 15px rgba(255, 255, 255, 0.2);
 }
 
 .hero-buttons {
@@ -301,7 +353,80 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
 }
 
+/* Simple fade-in animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
+.animated-title {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards 0.3s;
+}
+
+.animated-subtitle {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards 0.6s;
+}
+
+.animated-buttons {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards 0.9s;
+}
+
+/* Enhanced button glow effects */
+.hero-buttons .btn {
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-buttons .btn-primary {
+    box-shadow: 
+        0 4px 15px rgba(0, 0, 0, 0.2),
+        0 0 20px rgba(45, 36, 36, 0.3);
+}
+
+.hero-buttons .btn-primary:hover {
+    box-shadow: 
+        0 6px 20px rgba(0, 0, 0, 0.3),
+        0 0 30px rgba(47, 42, 42, 0.6),
+        0 0 40px rgba(43, 39, 40, 0.4);
+    transform: translateY(-2px);
+}
+
+.hero-buttons .btn-secondary {
+    box-shadow: 
+        0 4px 15px rgba(0, 0, 0, 0.2),
+        0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.hero-buttons .btn-secondary:hover {
+    box-shadow: 
+        0 6px 20px rgba(0, 0, 0, 0.3),
+        0 0 30px rgba(255, 255, 255, 0.4),
+        0 0 40px rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-particles {
+        background-size: 150px 100px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
 /* About Section */
 .about {
     padding: 100px 0;
