@@ -19,7 +19,12 @@ mobileOverlay.addEventListener('click', toggleMobileMenu);
 // Close menu when clicking on nav links
 navMenu.addEventListener('click', (e) => {
     if (e.target.classList.contains('nav-link')) {
-        toggleMobileMenu();
+        // Close the mobile menu
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+        mobileOverlay.classList.remove('active');
+        // Ensure scrollbar is restored
+        document.body.style.overflow = 'auto';
     }
 });
 
@@ -36,6 +41,7 @@ window.addEventListener('resize', () => {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
         mobileOverlay.classList.remove('active');
+        // Ensure scrollbar is restored
         document.body.style.overflow = 'auto';
     }
 });
