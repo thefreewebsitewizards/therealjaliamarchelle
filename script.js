@@ -104,3 +104,133 @@ document.querySelectorAll('.btn').forEach(btn => {
 window.addEventListener('load', () => {
     document.body.classList.add('loaded');
 });
+
+
+// Tab Functionality
+function initializeTabs() {
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+    
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetTab = btn.getAttribute('data-tab');
+            
+            // Remove active class from all buttons and panes
+            tabBtns.forEach(b => b.classList.remove('active'));
+            tabPanes.forEach(pane => pane.classList.remove('active'));
+            
+            // Add active class to clicked button and corresponding pane
+            btn.classList.add('active');
+            const targetPane = document.getElementById(targetTab);
+            if (targetPane) {
+                targetPane.classList.add('active');
+            }
+            
+            // Smooth scroll to tab content
+            const tabContent = document.querySelector('.tab-content');
+            if (tabContent) {
+                tabContent.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+}
+
+// Initialize tabs when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    initializeTabs();
+});
+
+// Update existing observer to include new tab elements
+const tabObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.animationPlayState = 'running';
+        }
+    });
+}, observerOptions);
+
+// Observe tab elements for animation
+document.querySelectorAll('.overview-card, .tab-btn').forEach(el => {
+    el.style.animationPlayState = 'paused';
+    tabObserver.observe(el);
+});
+
+// Add this to your existing script.js file
+
+// Carousel functionality
+let currentSlideIndex = 0;
+const slides = document.querySelectorAll('.carousel-slide');
+const dots = document.querySelectorAll('.dot');
+const totalSlides = slides.length;
+
+// Auto-play carousel
+let autoPlayInterval;
+
+function showSlide(index) {
+    // Remove active class from all slides and dots
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    // Add active class to current slide and dot
+    slides[index].classList.add('active');
+    dots[index].classList.add('active');
+}
+
+function changeSlide(direction) {
+    currentSlideIndex += direction;
+    
+    if (currentSlideIndex >= totalSlides) {
+        currentSlideIndex = 0;
+    } else if (currentSlideIndex < 0) {
+        currentSlideIndex = totalSlides - 1;
+    }
+    
+    showSlide(currentSlideIndex);
+    resetAutoPlay();
+}
+
+function currentSlide(index) {
+    currentSlideIndex = index - 1;
+    showSlide(currentSlideIndex);
+    resetAutoPlay();
+}
+
+function autoPlay() {
+    currentSlideIndex++;
+    if (currentSlideIndex >= totalSlides) {
+        currentSlideIndex = 0;
+    }
+    showSlide(currentSlideIndex);
+}
+
+function startAutoPlay() {
+    autoPlayInterval = setInterval(autoPlay, 4000); // Change slide every 4 seconds
+}
+
+function resetAutoPlay() {
+    clearInterval(autoPlayInterval);
+    startAutoPlay();
+}
+
+// Initialize carousel when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    if (slides.length > 0) {
+        showSlide(0);
+        startAutoPlay();
+        
+        // Pause auto-play on hover
+        const carouselContainer = document.querySelector('.carousel-container');
+        if (carouselContainer) {
+            carouselContainer.addEventListener('mouseenter', () => {
+                clearInterval(autoPlayInterval);
+            });
+            
+            carouselContainer.addEventListener('mouseleave', () => {
+                startAutoPlay();
+            });
+        }
+    }
+});
