@@ -234,3 +234,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+function bringToFront(clickedImage) {
+    // Remove clicked class from all images
+    document.querySelectorAll('.hero-image').forEach(img => {
+        img.classList.remove('clicked');
+    });
+    
+    // Add clicked class to the clicked image
+    clickedImage.classList.add('clicked');
+    
+    // Remove the class after 2 seconds to return to normal state
+    setTimeout(() => {
+        clickedImage.classList.remove('clicked');
+    }, 2000);
+}
