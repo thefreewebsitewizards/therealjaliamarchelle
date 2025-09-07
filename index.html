@@ -123,6 +123,7 @@
             <button class="tab-btn active" data-tab="overview">Program Overview</button>
             <button class="tab-btn" data-tab="timeline">6-Week Timeline</button>
             <button class="tab-btn" data-tab="details">Program Details</button>
+            <button class="tab-btn" data-tab="payment">Payment</button>
         </div>
 
         <!-- Tab Content -->
@@ -343,113 +344,400 @@
                     <!-- Investment Options -->
                     <div class="investment-section">
                         <div class="investment-header">
-                            <h3>Investment Options</h3>
+                            <h3>Service Packages</h3>
                             <p>Choose the path that best fits your journey</p>
                         </div>
                         
                         <div class="pricing-showcase">
-                            <div class="pricing-card premium">
-                                <div class="pricing-badge">Most Popular</div>
+                            <div class="pricing-card consultation">
+                                <div class="pricing-badge">Free</div>
                                 <div class="pricing-header">
                                     <div class="pricing-icon">
-                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-comments"></i>
                                     </div>
-                                    <h4>1:1 Personal Coaching</h4>
+                                    <h4>Free Consultation</h4>
                                     <div class="price-display">
                                         <span class="currency">$</span>
-                                        <span class="amount">400</span>
+                                        <span class="amount">0</span>
                                     </div>
                                     <div class="payment-options">
-                                        <span>or 2 payments of $175</span>
+                                        <span>30-minute discovery call</span>
                                     </div>
                                 </div>
                                 <div class="pricing-features">
                                     <div class="feature">
                                         <i class="fas fa-check"></i>
-                                        <span>Personalized attention & guidance</span>
+                                        <span>Personalized assessment</span>
                                     </div>
                                     <div class="feature">
                                         <i class="fas fa-check"></i>
-                                        <span>Customized program approach</span>
+                                        <span>Program overview & fit</span>
                                     </div>
                                     <div class="feature">
                                         <i class="fas fa-check"></i>
-                                        <span>Direct access to coach</span>
+                                        <span>Q&A session</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-check"></i>
+                                        <span>No commitment required</span>
+                                    </div>
+                                </div>
+                                <div class="pricing-action">
+                                    <button class="btn btn-primary select-service" data-service="consultation" data-price="0">Book Free Consultation</button>
+                                </div>
+                            </div>
+                            
+                            <div class="pricing-card coaching-package premium">
+                                <div class="pricing-badge">Most Popular</div>
+                                <div class="pricing-header">
+                                    <div class="pricing-icon">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <h4>6-Week Coaching Package</h4>
+                                    <div class="price-display">
+                                        <span class="currency">$</span>
+                                        <span class="amount">487</span>
+                                    </div>
+                                    <div class="payment-options">
+                                        <span>Complete transformation program</span>
+                                    </div>
+                                </div>
+                                <div class="pricing-features">
+                                    <div class="feature">
+                                        <i class="fas fa-check"></i>
+                                        <span>6 weekly coaching sessions</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-check"></i>
+                                        <span>Personalized action plans</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-check"></i>
+                                        <span>Digital journal downloads</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-check"></i>
+                                        <span>Email support between sessions</span>
+                                    </div>
+                                </div>
+                                <div class="pricing-action">
+                                    <button class="btn btn-primary select-service" data-service="coaching-package" data-price="487">Select Package</button>
+                                </div>
+                            </div>
+                            
+                            <div class="pricing-card single-session">
+                                <div class="pricing-header">
+                                    <div class="pricing-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <h4>1-Hour Session</h4>
+                                    <div class="price-display">
+                                        <span class="currency">$</span>
+                                        <span class="amount">75</span>
+                                    </div>
+                                    <div class="payment-options">
+                                        <span>Single coaching session</span>
+                                    </div>
+                                </div>
+                                <div class="pricing-features">
+                                    <div class="feature">
+                                        <i class="fas fa-check"></i>
+                                        <span>One-on-one coaching</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-check"></i>
+                                        <span>Focused problem-solving</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-check"></i>
+                                        <span>Actionable takeaways</span>
                                     </div>
                                     <div class="feature">
                                         <i class="fas fa-check"></i>
                                         <span>Flexible scheduling</span>
                                     </div>
                                 </div>
-                            </div>
-                            
-                            <div class="pricing-card group">
-                                <div class="pricing-header">
-                                    <div class="pricing-icon">
-                                        <i class="fas fa-users"></i>
-                                    </div>
-                                    <h4>Group Sessions</h4>
-                                    <div class="price-display">
-                                        <span class="currency">$</span>
-                                        <span class="amount">50</span>
-                                    </div>
-                                    <div class="payment-options">
-                                        <span>for 6 complete sessions</span>
-                                    </div>
-                                </div>
-                                <div class="pricing-features">
-                                    <div class="feature">
-                                        <i class="fas fa-check"></i>
-                                        <span>Community support system</span>
-                                    </div>
-                                    <div class="feature">
-                                        <i class="fas fa-check"></i>
-                                        <span>Shared experiences & wisdom</span>
-                                    </div>
-                                    <div class="feature">
-                                        <i class="fas fa-check"></i>
-                                        <span>Group accountability</span>
-                                    </div>
-                                    <div class="feature">
-                                        <i class="fas fa-check"></i>
-                                        <span>Interactive discussions</span>
-                                    </div>
+                                <div class="pricing-action">
+                                    <button class="btn btn-primary select-service" data-service="single-session" data-price="75">Book Session</button>
                                 </div>
                             </div>
-                            
-                            <div class="pricing-card self-paced">
-                                <div class="pricing-header">
-                                    <div class="pricing-icon">
-                                        <i class="fas fa-clock"></i>
-                                    </div>
-                                    <h4>Self-Paced Learning</h4>
-                                    <div class="price-display">
-                                        <span class="currency">$</span>
-                                        <span class="amount">25</span>
-                                    </div>
-                                    <div class="payment-options">
-                                        <span>for 6 comprehensive sessions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Tab -->
+            <div class="tab-pane" id="payment">
+                <div class="payment-section">
+                    <div class="payment-header">
+                        <div class="payment-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h3>Secure Payment</h3>
+                        <p class="payment-subtitle">Complete your transformation journey with secure, easy payment</p>
+                    </div>
+
+                    <div class="payment-container">
+                        <div class="payment-form-wrapper">
+                            <form id="payment-form" class="payment-form">
+                                <!-- Service Selection -->
+                                <div class="form-section service-selection">
+                                    <h4>Select Your Service</h4>
+                                    <div class="service-options">
+                                        <div class="service-option" data-service="consultation" data-price="0">
+                                            <div class="service-radio">
+                                                <input type="radio" id="service-consultation" name="service" value="consultation">
+                                                <label for="service-consultation">
+                                                    <div class="service-info">
+                                                        <div class="service-name">Free Consultation</div>
+                                                        <div class="service-price">$0</div>
+                                                        <div class="service-description">30-minute discovery call</div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="service-option" data-service="coaching-package" data-price="487">
+                                            <div class="service-radio">
+                                                <input type="radio" id="service-coaching" name="service" value="coaching-package">
+                                                <label for="service-coaching">
+                                                    <div class="service-info">
+                                                        <div class="service-name">6-Week Coaching Package</div>
+                                                        <div class="service-price">$487</div>
+                                                        <div class="service-description">Complete transformation program</div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="service-option" data-service="single-session" data-price="75">
+                                            <div class="service-radio">
+                                                <input type="radio" id="service-session" name="service" value="single-session">
+                                                <label for="service-session">
+                                                    <div class="service-info">
+                                                        <div class="service-name">1-Hour Session</div>
+                                                        <div class="service-price">$75</div>
+                                                        <div class="service-description">Single coaching session</div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="pricing-features">
-                                    <div class="feature">
-                                        <i class="fas fa-check"></i>
-                                        <span>Learn at your own pace</span>
-                                    </div>
-                                    <div class="feature">
-                                        <i class="fas fa-check"></i>
-                                        <span>Complete digital resources</span>
-                                    </div>
-                                    <div class="feature">
-                                        <i class="fas fa-check"></i>
-                                        <span>Lifetime access to materials</span>
-                                    </div>
-                                    <div class="feature">
-                                        <i class="fas fa-check"></i>
-                                        <span>Downloadable content</span>
+
+                                <!-- Personal Information -->
+                                <div class="form-section personal-info">
+                                    <h4>Personal Information</h4>
+                                    <div class="form-grid">
+                                        <div class="form-group">
+                                            <label for="first-name">First Name *</label>
+                                            <input type="text" id="first-name" name="firstName" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="last-name">Last Name *</label>
+                                            <input type="text" id="last-name" name="lastName" required>
+                                        </div>
+                                        <div class="form-group full-width">
+                                            <label for="email">Email Address *</label>
+                                            <input type="email" id="email" name="email" required>
+                                        </div>
+                                        <div class="form-group full-width">
+                                            <label for="phone">Phone Number</label>
+                                            <input type="tel" id="phone" name="phone">
+                                        </div>
                                     </div>
                                 </div>
+
+                                <!-- Payment Method Selection -->
+                                <div class="form-section payment-method-selection">
+                                    <h4>Choose Payment Method</h4>
+                                    <div class="payment-methods">
+                                        <div class="payment-method" data-method="credit-card">
+                                            <input type="radio" id="method-card" name="paymentMethod" value="credit-card" checked>
+                                            <label for="method-card">
+                                                <div class="method-icon">
+                                                    <i class="fas fa-credit-card"></i>
+                                                </div>
+                                                <div class="method-info">
+                                                    <span class="method-name">Credit/Debit Card</span>
+                                                    <span class="method-description">Visa, Mastercard, American Express</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        
+                                        <div class="payment-method" data-method="paypal">
+                                            <input type="radio" id="method-paypal" name="paymentMethod" value="paypal">
+                                            <label for="method-paypal">
+                                                <div class="method-icon">
+                                                    <i class="fab fa-paypal"></i>
+                                                </div>
+                                                <div class="method-info">
+                                                    <span class="method-name">PayPal</span>
+                                                    <span class="method-description">Pay with your PayPal account</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        
+                                        <div class="payment-method" data-method="apple-pay">
+                                            <input type="radio" id="method-apple" name="paymentMethod" value="apple-pay">
+                                            <label for="method-apple">
+                                                <div class="method-icon">
+                                                    <i class="fab fa-apple-pay"></i>
+                                                </div>
+                                                <div class="method-info">
+                                                    <span class="method-name">Apple Pay</span>
+                                                    <span class="method-description">Touch ID or Face ID</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        
+                                        <div class="payment-method" data-method="google-pay">
+                                            <input type="radio" id="method-google" name="paymentMethod" value="google-pay">
+                                            <label for="method-google">
+                                                <div class="method-icon">
+                                                    <i class="fab fa-google-pay"></i>
+                                                </div>
+                                                <div class="method-info">
+                                                    <span class="method-name">Google Pay</span>
+                                                    <span class="method-description">Pay with Google</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Payment Information -->
+                                <div class="form-section payment-info" id="payment-info-section">
+                                    <div class="payment-security-notice">
+                                        <i class="fas fa-shield-alt"></i>
+                                        <span>Your payment information is secure and encrypted</span>
+                                    </div>
+                                    
+                                    <!-- Credit Card Form -->
+                                    <div class="payment-form-container" id="credit-card-form">
+                                        <h4>Credit/Debit Card Information</h4>
+                                        <div class="form-grid">
+                                            <div class="form-group full-width">
+                                                <label for="card-number">Card Number *</label>
+                                                <input type="text" id="card-number" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                                                <div class="card-icons">
+                                                    <i class="fab fa-cc-visa"></i>
+                                                    <i class="fab fa-cc-mastercard"></i>
+                                                    <i class="fab fa-cc-amex"></i>
+                                                    <i class="fab fa-cc-discover"></i>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="expiry-date">Expiry Date *</label>
+                                                <input type="text" id="expiry-date" name="expiryDate" placeholder="MM/YY" maxlength="5">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="cvv">CVV *</label>
+                                                <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="4">
+                                                <div class="cvv-help">
+                                                    <i class="fas fa-question-circle"></i>
+                                                    <span class="tooltip">3-4 digits on the back of your card</span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group full-width">
+                                                <label for="cardholder-name">Cardholder Name *</label>
+                                                <input type="text" id="cardholder-name" name="cardholderName" placeholder="John Doe">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- PayPal Form -->
+                                    <div class="payment-form-container" id="paypal-form" style="display: none;">
+                                        <h4>PayPal Payment</h4>
+                                        <div class="paypal-container">
+                                            <div class="paypal-info">
+                                                <i class="fab fa-paypal paypal-icon"></i>
+                                                <p>You will be redirected to PayPal to complete your payment securely.</p>
+                                            </div>
+                                            <div class="paypal-benefits">
+                                                <ul>
+                                                    <li><i class="fas fa-check"></i> Buyer protection</li>
+                                                    <li><i class="fas fa-check"></i> No card details required</li>
+                                                    <li><i class="fas fa-check"></i> Instant payment</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Apple Pay Form -->
+                                    <div class="payment-form-container" id="apple-pay-form" style="display: none;">
+                                        <h4>Apple Pay</h4>
+                                        <div class="digital-wallet-container">
+                                            <div class="wallet-info">
+                                                <i class="fab fa-apple-pay wallet-icon"></i>
+                                                <p>Use Touch ID or Face ID to pay with Apple Pay</p>
+                                            </div>
+                                            <div class="wallet-device">
+                                                <i class="fas fa-mobile-alt"></i>
+                                                <span>Compatible with iPhone, iPad, and Mac</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Google Pay Form -->
+                                    <div class="payment-form-container" id="google-pay-form" style="display: none;">
+                                        <h4>Google Pay</h4>
+                                        <div class="digital-wallet-container">
+                                            <div class="wallet-info">
+                                                <i class="fab fa-google-pay wallet-icon"></i>
+                                                <p>Pay quickly and securely with Google Pay</p>
+                                            </div>
+                                            <div class="wallet-device">
+                                                <i class="fas fa-android"></i>
+                                                <span>Available on Android devices and web</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Order Summary -->
+                                <div class="form-section order-summary">
+                                    <h4>Order Summary</h4>
+                                    <div class="summary-content">
+                                        <div class="selected-service">
+                                            <span class="service-label">Selected Service:</span>
+                                            <span class="service-name-display">Please select a service</span>
+                                        </div>
+                                        <div class="total-amount">
+                                            <span class="total-label">Total:</span>
+                                            <span class="total-price">$0.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <div class="form-section submit-section">
+                                    <button type="submit" class="btn btn-primary payment-submit" disabled>
+                                        <i class="fas fa-lock"></i>
+                                        Complete Secure Payment
+                                    </button>
+                                    <p class="payment-terms">
+                                        By completing this payment, you agree to our 
+                                        <a href="#" class="terms-link" onclick="openModal('termsModal'); return false;">Terms of Service</a> and
+                        <a href="#" class="privacy-link" onclick="openModal('privacyModal'); return false;">Privacy Policy</a>
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Payment Success Message -->
+                        <div class="payment-success" id="payment-success" style="display: none;">
+                            <div class="success-icon">
+                                <i class="fas fa-check-circle"></i>
                             </div>
+                            <h3>Payment Successful!</h3>
+                            <p>Thank you for your purchase. You will receive a confirmation email shortly with next steps.</p>
+                            <div class="countdown-timer">
+                                <span>Returning to payment form in </span>
+                                <span id="countdown-seconds">10</span>
+                                <span> seconds</span>
+                            </div>
+                            <button class="btn btn-secondary" onclick="resetPaymentForm()">Make Another Payment</button>
                         </div>
                     </div>
                 </div>
@@ -559,6 +847,153 @@
             </div>
         </div>
     </footer>
+
+    <!-- Terms of Service Modal -->
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Terms of Service</h2>
+                <span class="close" data-modal="termsModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p class="last-updated">Last updated: January 2024</p>
+                
+                <section>
+                    <h3>1. Acceptance of Terms</h3>
+                    <p>By accessing and using the services provided by Jalia Maye and Bloom + Belong, you accept and agree to be bound by the terms and provision of this agreement.</p>
+                </section>
+                
+                <section>
+                    <h3>2. Services Description</h3>
+                    <p>Jalia Maye provides faith-centered coaching services, including but not limited to:</p>
+                    <ul>
+                        <li>Free consultation sessions</li>
+                        <li>6-week coaching packages</li>
+                        <li>Single-hour coaching sessions</li>
+                        <li>Mental wellness advocacy and support</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h3>3. Payment Terms</h3>
+                    <p>Payment for services must be made in advance. All fees are non-refundable unless otherwise specified. We accept various payment methods including credit cards, PayPal, Apple Pay, and Google Pay.</p>
+                </section>
+                
+                <section>
+                    <h3>4. Coaching Relationship</h3>
+                    <p>The coaching relationship is a professional partnership. Coaching is not therapy, counseling, or medical treatment. Clients are responsible for their own decisions and actions.</p>
+                </section>
+                
+                <section>
+                    <h3>5. Confidentiality</h3>
+                    <p>All information shared during coaching sessions will be kept confidential, except where disclosure is required by law or to prevent harm.</p>
+                </section>
+                
+                <section>
+                    <h3>6. Cancellation Policy</h3>
+                    <p>Sessions may be rescheduled with at least 24 hours notice. Cancellations with less than 24 hours notice may result in forfeiture of the session.</p>
+                </section>
+                
+                <section>
+                    <h3>7. Limitation of Liability</h3>
+                    <p>Jalia Maye and Bloom + Belong shall not be liable for any indirect, incidental, special, or consequential damages arising from the use of our services.</p>
+                </section>
+                
+                <section>
+                    <h3>8. Contact Information</h3>
+                    <p>For questions about these Terms of Service, please contact us through our website or email.</p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Privacy Policy</h2>
+                <span class="close" data-modal="privacyModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p class="last-updated">Last updated: January 2024</p>
+                
+                <section>
+                    <h3>1. Information We Collect</h3>
+                    <p>We collect information you provide directly to us, such as when you:</p>
+                    <ul>
+                        <li>Schedule a consultation or coaching session</li>
+                        <li>Make a payment for our services</li>
+                        <li>Contact us with questions or feedback</li>
+                        <li>Subscribe to our newsletter or updates</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h3>2. Types of Information</h3>
+                    <p>The information we may collect includes:</p>
+                    <ul>
+                        <li>Personal identifiers (name, email address, phone number)</li>
+                        <li>Payment information (processed securely through third-party providers)</li>
+                        <li>Communication preferences</li>
+                        <li>Session notes and coaching-related information</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h3>3. How We Use Your Information</h3>
+                    <p>We use the information we collect to:</p>
+                    <ul>
+                        <li>Provide and improve our coaching services</li>
+                        <li>Process payments and manage your account</li>
+                        <li>Communicate with you about appointments and services</li>
+                        <li>Send you relevant updates and resources (with your consent)</li>
+                        <li>Comply with legal obligations</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h3>4. Information Sharing</h3>
+                    <p>We do not sell, trade, or otherwise transfer your personal information to third parties, except:</p>
+                    <ul>
+                        <li>With your explicit consent</li>
+                        <li>To trusted service providers who assist in operating our business</li>
+                        <li>When required by law or to protect rights and safety</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h3>5. Data Security</h3>
+                    <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. Payment information is processed through secure, encrypted channels.</p>
+                </section>
+                
+                <section>
+                    <h3>6. Your Rights</h3>
+                    <p>You have the right to:</p>
+                    <ul>
+                        <li>Access and review your personal information</li>
+                        <li>Request corrections to inaccurate information</li>
+                        <li>Request deletion of your personal information</li>
+                        <li>Opt-out of marketing communications</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h3>7. Cookies and Tracking</h3>
+                    <p>Our website may use cookies and similar technologies to enhance your experience and analyze website usage. You can control cookie settings through your browser preferences.</p>
+                </section>
+                
+                <section>
+                    <h3>8. Changes to This Policy</h3>
+                    <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last updated" date.</p>
+                </section>
+                
+                <section>
+                    <h3>9. Contact Us</h3>
+                    <p>If you have any questions about this Privacy Policy or our data practices, please contact us through our website or email.</p>
+                </section>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
